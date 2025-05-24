@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// Слайс фільтру
 const filtersSlice = createSlice({
   name: "filters",
   initialState: {
@@ -11,6 +12,9 @@ const filtersSlice = createSlice({
     },
   },
 });
+
+// ✅ Селектор
+export const selectNameFilter = (state) => state.filters.name;
 
 export const { changeFilter } = filtersSlice.actions;
 export default filtersSlice.reducer;
